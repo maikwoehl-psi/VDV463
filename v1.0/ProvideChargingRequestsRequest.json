@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"$id": "urn:VDV463:1:0:0:ProvideChargingRequestsRequest",
-	"comment": "VDV463 1.0.0 FINAL",
+	"$id": "urn:VDV463:1:0:1:ProvideChargingRequestsRequest",
+	"comment": "VDV463 1.0.1 FINAL",
 	"title": "ProvideChargingRequestsRequest",
 	"description": "This type represents the data associated with charging requests sent by a presystem to a load management system.",
 	"type": "object",
@@ -29,6 +29,12 @@
 			"description": "This type represents an unique identifier according to RFC3986.",
 			"type": "string",
 			"format": "uri",
+			"additionalProperties": false
+		},
+		"ConnectorIdentifier": {
+			"description": "This type represents an identifier of connector as defined in OCPP 1.6 & 2.0.1.",
+			"type": "integer",
+			"minimum": 1,
 			"additionalProperties": false
 		},
 		"ChargingInstruction": {
@@ -143,6 +149,9 @@
 			"properties": {
 				"chargingPointId": {
 					"$ref": "#/definitions/UniqueIdentifier"
+				},
+				"connectorId": {
+					"$ref": "#/definitions/ConnectorIdentifier"
 				},
 				"vehicleId": {
 					"$ref": "#/definitions/VehicleIdentifier"

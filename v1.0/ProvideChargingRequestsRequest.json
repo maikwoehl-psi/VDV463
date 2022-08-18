@@ -35,6 +35,7 @@
 			"description": "This type represents an identifier of connector as defined in OCPP 1.6 & 2.0.1.",
 			"type": "integer",
 			"minimum": 1,
+          	"multipleOf": 1,
 			"additionalProperties": false
 		},
 		"ChargingInstruction": {

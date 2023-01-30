@@ -97,6 +97,11 @@
 					"type": "number",
 					"additionalProperties": false
 				},
+				"requestedStartTime": {
+					"type": "string",
+					"format": "date-time",
+					"additionalProperties": false
+				},
 				"requestedFinishTime": {
 					"type": "string",
 					"format": "date-time",
